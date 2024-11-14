@@ -1,0 +1,31 @@
+id: c9ddffc4-8246-42c9-ab43-328c13fab8b3
+name: spring-music
+timestamp: 2024-11-13T21:58:00.580804Z
+source: INTELLIJ
+username: risbergt
+fragments:
+  java-version:
+    name: java-version
+    git:
+      url: https://github.com/vmware-tanzu/application-accelerator-samples
+      subPath: fragments/java-version
+      ref: main
+  build-wrapper-gradle:
+    name: build-wrapper-gradle
+    git:
+      url: https://github.com/vmware-tanzu/application-accelerator-samples
+      subPath: fragments/build-wrapper-gradle
+      ref: main
+accelerator:
+  name: spring-music
+  git:
+    url: https://github.com/vmware-tanzu/application-accelerator-samples.git
+    subPath: spring-music
+    ref: main
+options:
+  databaseType: mysql
+  deploymentType: tpfork8s
+  persistenceType: jpa
+  includeBuildToolWrapper: true
+  javaVersion: "21"
+  projectName: mysql-music
